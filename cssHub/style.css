@@ -1,0 +1,96 @@
+/*****General || Part******/
+body {
+  font-family: "Courier Prime", monospace;
+}
+
+/*******Navbar || Part********/
+.navbar-brand {
+  font-family: "Courgette", cursive;
+}
+.user-img {
+  height: 40px;
+  width: 40px;
+}
+
+/****** Header || Part*****/
+.header {
+  background: linear-gradient(to bottom, #274c77b6, #274c77b6),
+    url("../images/bg.jpg");
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 30vh !important;
+  width: 100%;
+}
+
+.action-bar {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+}
+.search i {
+  top: 12px;
+  right: 10px;
+}
+.search input {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.search input:focus {
+  width: 65% !important;
+  padding-right: 40px !important;
+}
+.container .row:nth-child(2) {
+  max-height: 550px !important;
+  overflow: auto !important;
+}
+.container .row:nth-child(2)::-webkit-scrollbar {
+  width: 8px;
+}
+.container .row:nth-child(2)::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.new-product {
+  width: fit-content;
+  background: #000;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.new-product:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*****Product Info || Part ********/
+
+.modal-content .btn {
+  background-color: #415a77 !important;
+
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.modal-header {
+  background: linear-gradient(#415a77, #415a77b4) !important;
+}
+.modal-title {
+  color: #fff !important;
+}
+.modal-content .btn:hover {
+  background-color: #59789c !important;
+}
