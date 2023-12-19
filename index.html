@@ -8,16 +8,10 @@
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courgette&family=Courier+Prime:ital,wght@0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Courier+Prime:ital,wght@0,700;1,400;1,700&display=swap"rel="stylesheet"/>
 
     <!--Fontawesome link-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
     <!--Bootstrap file-->
     <link rel="stylesheet" href="cssHub/bootstrap.min.css" />
@@ -28,21 +22,12 @@
   <body class="text-white">
     <!--Navbar Section-->
     <nav class="nabbar bg-dark">
-      <div
-        class="container d-flex justify-content-between align-items-center py-2"
-      >
+      <div class="container d-flex justify-content-between align-items-center py-2">
         <a href="index.html" class="navbar-brand fs-4 fw-bold">Smart-Store</a>
 
-        <div
-          class="user d-flex justify-content-between align-items-center gap-2"
-        >
-          <img
-            src="images/user.jpg"
-            alt="user image"
-            class="rounded-circle user-img me-2"
-          />
+        <div class="user d-flex justify-content-between align-items-center gap-2">
+          <img src="images/user.jpg" alt="user image" class="rounded-circle user-img me-2"/>
           <span class="user-name">User Name</span>
-
           <a class="btn log-out" href="#">
             <i class="fa-solid fa-right-from-bracket text-warning"></i>
           </a>
@@ -59,36 +44,17 @@
         </div>
       </div>
 
-      <div
-        class="container d-flex flex-column gap-3 position-relative overflow-visible"
-      >
+      <div class="container d-flex flex-column gap-3 position-relative overflow-visible">
         <!--Actions Section-->
-        <div
-          class="d-flex justify-content-between shadow-sm border p-3 rounded-1 action-bar bg-body"
-        >
-          <button
-            type="button"
-            data-bs-target="#product-info"
-            data-bs-toggle="modal"
-            class="btn btn-secondary new-product"
-            id="new-product-btn"
-          >
+        <div class="d-flex justify-content-between shadow-sm border p-3 rounded-1 action-bar bg-body">
+          <button type="button" data-bs-target="#product-info" data-bs-toggle="modal" class="btn btn-secondary new-product" id="new-product-btn">
             <i class="fa-solid fa-plus me-2"></i>
             New
           </button>
 
-          <div
-            class="search d-flex justify-content-end align-items-center position-relative w-50"
-          >
-            <i
-              class="fa-solid fa-magnifying-glass text-dark position-absolute"
-            ></i>
-            <input
-              type="search"
-              class="form-control ps-2 w-50"
-              placeholder="Search..."
-              id="search-input"
-            />
+          <div class="search d-flex justify-content-end align-items-center position-relative w-50">
+            <i class="fa-solid fa-magnifying-glass text-dark position-absolute"></i>
+            <input type="search" class="form-control ps-2 w-50" placeholder="Search..." id="search-input"/>
           </div>
         </div>
 
@@ -117,71 +83,39 @@
             <div class="modal-dialog modal-xl">
               <div class="modal-content bg-body-info">
                 <div class="modal-header d-flex">
-                  <h1
-                    class="modal-title fs-3 flex-grow-1 text-center position-relative"
-                  >
-                    Product Info
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close btn-close-white shadow-none align-self-start"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                    id="close-popup-btn"
-                  ></button>
+                  <h1 class="modal-title fs-3 flex-grow-1 text-center position-relative">Product Info</h1>
+                  <button type="button" class="btn-close btn-close-white shadow-none align-self-start" data-bs-dismiss="modal" aria-label="Close" id="close-popup-btn" ></button>
                 </div>
 
                 <div class="modal-body">
                   <form class="form col">
                     <div class="form-group mb-3">
                       <label for="product-name" class="text-muted">Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="product-name"
-                      />
+                      <input type="text" class="form-control" id="product-name" />
                       <div class="invalid-feedback">
                         name must start with capital and length[2-7] chars
                       </div>
                     </div>
 
                     <div class="form-group mb-3">
-                      <label for="product-price" class="text-muted"
-                        >Price</label
-                      >
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="product-price"
-                      />
+                      <label for="product-price" class="text-muted">Price</label>
+                      <input type="number" class="form-control" id="product-price"/>
                       <div class="invalid-feedback">
                         price must be more in range [7000 - 100000]
                       </div>
                     </div>
 
                     <div class="form-group mb-3">
-                      <label for="product-category" class="text-muted"
-                        >Category</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control mb-3"
-                        id="product-category"
-                      />
+                      <label for="product-category" class="text-muted">Category</label>
+                      <input type="text" class="form-control mb-3" id="product-category" />
                       <div class="invalid-feedback">
                         category must have length [2-7] chars
                       </div>
                     </div>
 
                     <div class="form-group mb-3">
-                      <label for="product-description" class="text-muted"
-                        >Description</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control mb-3"
-                        id="product-description"
-                      />
+                      <label for="product-description" class="text-muted" >Description</label>
+                      <input type="text" class="form-control mb-3" id="product-description"/>
                       <div class="invalid-feedback">
                         category must have length [4-25] chars
                       </div>
@@ -192,11 +126,7 @@
                         Add Product
                       </button>
 
-                      <button
-                        class="btn text-white d-none"
-                        id="update-btn"
-                        type="button"
-                      >
+                      <button class="btn text-white d-none" id="update-btn" type="button">
                         Update Product
                       </button>
                     </div>
