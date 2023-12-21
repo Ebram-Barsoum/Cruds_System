@@ -9,7 +9,7 @@ let updateBtn = document.getElementById("update-btn");
 let closePopupBtn = document.getElementById("close-popup-btn");
 let newProductBtn = document.getElementById("new-product-btn");
 
-let validName = (validPrice = validCategory = validDescription = true);
+let validName = validPrice = validCategory = validDescription = false;
 let products = [];
 let indexToBeUpdated;
 let row = document.getElementById("products");
@@ -80,6 +80,7 @@ function clear_inputs() {
     inputs[index].value = "";
     inputs[index].classList.remove("is-valid", "is-invalid");
   }
+  validName = validPrice = validCategory = validDescription = false;
 }
 
 // handling search input
@@ -104,8 +105,8 @@ searchInput.oninput = function () {
 // handling updating a product
 function prepare_date(index) {
   if (updateBtn.classList.contains("d-none")) {
-    updateBtn.classList.remove("d-none");
-    addBtn.classList.add("d-none");
+      updateBtn.classList.remove("d-none");
+      addBtn.classList.add("d-none");
   }
 
   indexToBeUpdated = index;
@@ -114,8 +115,15 @@ function prepare_date(index) {
   productPrice.value = products[index].price;
   productCategory.value = products[index].category;
   productDescription.value = products[index].description;
+
+
 }
 updateBtn.onclick = function () {
+  validName = validate_input(productName, nameRegEx);
+  validPrice = validate_input(productPrice, priceRegEx);
+  validCategory = validate_input(productCategory, categoryRegEx);
+  validDescription = validate_input(productDescription, descriptionRegEx);
+
   if (!validName || !validPrice || !validCategory || !validDescription) return;
   products[indexToBeUpdated].name = productName.value;
   products[indexToBeUpdated].price = productPrice.value;
@@ -134,7 +142,7 @@ closePopupBtn.onclick = function () {
 let nameRegEx = /^[A-Z]\w{1,6}$/;
 let priceRegEx = /([7-9]\d{3,4}|[1-6]\d{4}|(100000))/g;
 let categoryRegEx = /^\w{2,7}$/i;
-let descriptionRegEx = /^[\w.]{4,15}$/i;
+let descriptionRegEx = /^[\w\W\d\.]{4,15}$/i;
 
 function validate_input(input, regEx) {
   if (regEx.test(input.value)) {
