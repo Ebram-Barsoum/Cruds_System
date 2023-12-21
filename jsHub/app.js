@@ -131,10 +131,10 @@ closePopupBtn.onclick = function () {
 };
 
 // inputs validation
-let nameRegEx = /^[A-Z]\w{1,6}$/g;
+let nameRegEx = /^[A-Z]\w{1,6}$/;
 let priceRegEx = /([7-9]\d{3,4}|[1-6]\d{4}|(100000))/g;
-let categoryRegEx = /^\w{2,7}$/gi;
-let descriptionRegEx = /^[\w.]{4,15}/gi;
+let categoryRegEx = /^\w{2,7}$/i;
+let descriptionRegEx = /^[\w.]{4,15}$/i;
 
 function validate_input(input, regEx) {
   if (regEx.test(input.value)) {
