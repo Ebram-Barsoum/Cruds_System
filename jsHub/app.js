@@ -140,7 +140,7 @@ closePopupBtn.onclick = function () {
 
 // inputs validation
 let nameRegEx = /^[A-Z]\w{1,6}$/;
-let priceRegEx = /([7-9]\d{3,4}|[1-6]\d{4}|(100000))/g;
+let priceRegEx = /([7-9]\d{3,4}|[1-6]\d{4}|(100000))/;
 let categoryRegEx = /^\w{2,7}$/i;
 let descriptionRegEx = /^[\w\W\d\.]{4,15}$/i;
 
